@@ -6,4 +6,10 @@ class Project
     @backers = []
   end
 
+  def add_backer(backer)
+    if backer.instance_of? Backer
+      @backers << backer
+    end
+  end
+
 end
