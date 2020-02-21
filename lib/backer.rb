@@ -12,7 +12,7 @@ class Backer
     if project.instance_of? Project
       @backed_projects << project
     end
-    project.add_backer(self)
+    project.add_backer(self) unless project.backers.include?(self)
   end
 
 end
